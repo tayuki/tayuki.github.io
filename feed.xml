@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Graffiti</title>
+  <subtitle>Makes developing websites simple.</subtitle>
+  <id>http://www.example.com</id>
+  <link href="http://www.example.com"/>
+  <link href="http://www.example.com/feed.xml" rel="self"/>
+  <updated>2014-05-01T09:00:00+09:00</updated>
+  <author>
+    <name>tayuki</name>
+  </author>
+  <entry>
+    <title>testpost</title>
+    <link rel="alternate" href="http://www.example.com/2014/05/01/testpost/"/>
+    <id>http://www.example.com/2014/05/01/testpost/</id>
+    <published>2014-05-01T09:00:00+09:00</published>
+    <updated>2014-05-01T11:10:40+09:00</updated>
+    <author>
+      <name>tayuki</name>
+    </author>
+    <summary type="html"> test 
+
+h2
+
+this is test post.
+123def test
+ puts "hello world"
+end
+
+
+
+test
+test2
+</summary>
+  </entry>
+  <entry>
+    <title>Welcome to Ghost</title>
+    <link rel="alternate" href="http://www.example.com/2013/10/26/welcome-to-ghost/"/>
+    <id>http://www.example.com/2013/10/26/welcome-to-ghost/</id>
+    <published>2013-10-26T09:00:00+09:00</published>
+    <updated>2014-05-01T10:59:18+09:00</updated>
+    <author>
+      <name>tayuki</name>
+    </author>
+    <summary type="html">You’re in! Nice. We’ve put together a little post to introduce you to the Ghost
+editor and get you started. Go ahead and edit this post to get going and learn
+how it all works!
+
+Getting Started
+
+Writing in markdown is really easy. In the left hand...</summary>
+  </entry>
+</feed>
