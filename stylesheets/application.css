@@ -151,7 +151,7 @@ legend {
 button, input, select,
 textarea {
   font-family: inherit;
-  font-size: 100%;
+  font-size: 90%;
   margin: 0; }
 
 /* line 77, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
@@ -298,33 +298,33 @@ h4, h5, h6 {
 
 /* line 194, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
 h1 {
-  font-size: 5rem;
+  font-size: 4rem;
   line-height: 1.2em;
   letter-spacing: -2px;
   text-indent: -3px; }
 
 /* line 201, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
 h2 {
-  font-size: 4rem;
+  font-size: 1.5em;
   line-height: 1.2em;
   letter-spacing: -1px;
   text-indent: -2px; }
 
 /* line 208, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
 h3 {
-  font-size: 3.5rem; }
+  font-size: 2rem; }
 
 /* line 212, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
 h4 {
-  font-size: 3rem; }
+  font-size: 1.5rem; }
 
 /* line 216, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
 h5 {
-  font-size: 2.5rem; }
+  font-size: 1rem; }
 
 /* line 220, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
 h6 {
-  font-size: 2rem; }
+  font-size: 1rem; }
 
 /* line 224, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
 a {
@@ -1208,275 +1208,292 @@ margin on the iframe, cause it breaks stuff. */
   margin: 0; }
 
 /* line 3, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .cm {
-  color: #999988;
+.highlight .c, .highlight .cd {
+  color: #75715e;
   font-style: italic; }
 
 /* line 7, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .cp {
-  color: #999999;
-  font-weight: bold; }
+.highlight .cm {
+  color: #75715e;
+  font-style: italic; }
 
 /* line 11, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
 .highlight .c1 {
-  color: #999988;
+  color: #75715e;
   font-style: italic; }
 
 /* line 15, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .cs {
-  color: #999999;
-  font-weight: bold;
-  font-style: italic; }
+.highlight .cp {
+  color: #75715e;
+  font-weight: bold; }
 
-/* line 20, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .c, .highlight .cd {
-  color: #999988;
+/* line 19, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .cs {
+  color: #75715e;
+  font-weight: bold;
   font-style: italic; }
 
 /* line 24, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
 .highlight .err {
-  color: #a61717;
-  background-color: #e3d2d2; }
+  color: #960050;
+  background-color: #1e0010; }
 
 /* line 28, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
 .highlight .gd {
-  color: #000000;
-  background-color: #ffdddd; }
+  color: #000000; }
 
-/* line 32, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+/* line 31, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .gi {
+  color: #000000; }
+
+/* line 34, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
 .highlight .ge {
   color: #000000;
   font-style: italic; }
 
-/* line 36, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+/* line 38, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
 .highlight .gr {
   color: #aa0000; }
 
-/* line 39, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .gh {
-  color: #999999; }
-
-/* line 42, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .gi {
-  color: #000000;
-  background-color: #ddffdd; }
-
-/* line 46, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .go {
-  color: #888888; }
-
-/* line 49, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .gp {
-  color: #555555; }
-
-/* line 52, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .gs {
-  font-weight: bold; }
-
-/* line 55, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .gu {
-  color: #aaaaaa; }
-
-/* line 58, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+/* line 41, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
 .highlight .gt {
   color: #aa0000; }
 
-/* line 61, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .kc {
-  color: #000000;
-  font-weight: bold; }
-
-/* line 65, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .kd {
-  color: #000000;
-  font-weight: bold; }
-
-/* line 69, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .kn {
-  color: #000000;
-  font-weight: bold; }
-
-/* line 73, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .kp {
-  color: #000000;
-  font-weight: bold; }
-
-/* line 77, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .kr {
-  color: #000000;
-  font-weight: bold; }
-
-/* line 81, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .kt {
-  color: #445588;
-  font-weight: bold; }
-
-/* line 85, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .k, .highlight .kv {
-  color: #000000;
-  font-weight: bold; }
-
-/* line 89, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .mf {
-  color: #009999; }
-
-/* line 92, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .mh {
-  color: #009999; }
-
-/* line 95, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .il {
-  color: #009999; }
-
-/* line 98, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .mi {
-  color: #009999; }
-
-/* line 101, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .mo {
-  color: #009999; }
-
-/* line 104, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .m, .highlight .mb, .highlight .mx {
-  color: #009999; }
-
-/* line 107, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .sb {
-  color: #d14; }
-
-/* line 110, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .sc {
-  color: #d14; }
-
-/* line 113, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .sd {
-  color: #d14; }
-
-/* line 116, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .s2 {
-  color: #d14; }
-
-/* line 119, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .se {
-  color: #d14; }
-
-/* line 122, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .sh {
-  color: #d14; }
-
-/* line 125, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .si {
-  color: #d14; }
-
-/* line 128, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .sx {
-  color: #d14; }
-
-/* line 131, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .sr {
-  color: #009926; }
-
-/* line 134, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .s1 {
-  color: #d14; }
-
-/* line 137, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .ss {
-  color: #990073; }
-
-/* line 140, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .s {
-  color: #d14; }
-
-/* line 143, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .na {
-  color: #008080; }
-
-/* line 146, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .bp {
+/* line 44, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .gh {
   color: #999999; }
 
+/* line 47, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .go {
+  color: #888888; }
+
+/* line 50, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .gp {
+  color: #555555; }
+
+/* line 53, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .gs {
+  font-weight: bold; }
+
+/* line 56, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .gu {
+  color: #aaaaaa; }
+
+/* line 59, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .k, .highlight .kv {
+  color: #66d9ef;
+  font-weight: bold; }
+
+/* line 63, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .kc {
+  color: #66d9ef;
+  font-weight: bold; }
+
+/* line 67, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .kd {
+  color: #66d9ef;
+  font-weight: bold; }
+
+/* line 71, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .kp {
+  color: #66d9ef;
+  font-weight: bold; }
+
+/* line 75, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .kr {
+  color: #66d9ef;
+  font-weight: bold; }
+
+/* line 79, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .kt {
+  color: #66d9ef;
+  font-weight: bold; }
+
+/* line 83, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .kn {
+  color: #f92672;
+  font-weight: bold; }
+
+/* line 87, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .ow {
+  color: #f92672;
+  font-weight: bold; }
+
+/* line 91, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .o {
+  color: #f92672;
+  font-weight: bold; }
+
+/* line 95, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .mf {
+  color: #ae81ff; }
+
+/* line 98, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .mh {
+  color: #ae81ff; }
+
+/* line 101, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .il {
+  color: #ae81ff; }
+
+/* line 104, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .mi {
+  color: #ae81ff; }
+
+/* line 107, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .mo {
+  color: #ae81ff; }
+
+/* line 110, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .m, .highlight .mb, .highlight .mx {
+  color: #ae81ff; }
+
+/* line 113, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .se {
+  color: #ae81ff; }
+
+/* line 116, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .sb {
+  color: #e6db74; }
+
+/* line 119, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .sc {
+  color: #e6db74; }
+
+/* line 122, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .sd {
+  color: #e6db74; }
+
+/* line 125, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .s2 {
+  color: #e6db74; }
+
+/* line 128, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .sh {
+  color: #e6db74; }
+
+/* line 131, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .si {
+  color: #e6db74; }
+
+/* line 134, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .sx {
+  color: #e6db74; }
+
+/* line 137, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .sr {
+  color: #e6db74; }
+
+/* line 140, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .s1 {
+  color: #e6db74; }
+
+/* line 143, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .ss {
+  color: #e6db74; }
+
+/* line 146, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .s {
+  color: #e6db74; }
+
 /* line 149, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .nb {
-  color: #0086B3; }
+.highlight .na {
+  color: #a6e22e; }
 
 /* line 152, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
 .highlight .nc {
-  color: #445588;
+  color: #a6e22e;
   font-weight: bold; }
 
 /* line 156, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .no {
-  color: #008080; }
-
-/* line 159, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
 .highlight .nd {
-  color: #3c5d5d;
+  color: #a6e22e;
   font-weight: bold; }
 
-/* line 163, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .ni {
-  color: #800080; }
-
-/* line 166, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+/* line 160, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
 .highlight .ne {
-  color: #990000;
+  color: #a6e22e;
   font-weight: bold; }
 
-/* line 170, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+/* line 164, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
 .highlight .nf {
-  color: #990000;
+  color: #a6e22e;
   font-weight: bold; }
+
+/* line 168, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .no {
+  color: #66d9ef; }
+
+/* line 171, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .bp {
+  color: #f8f8f2; }
 
 /* line 174, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .nl {
-  color: #990000;
-  font-weight: bold; }
+.highlight .nb {
+  color: #f8f8f2; }
 
-/* line 178, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+/* line 177, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .ni {
+  color: #f8f8f2; }
+
+/* line 180, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
 .highlight .nn {
-  color: #555555; }
+  color: #f8f8f2; }
 
-/* line 181, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .nt {
-  color: #000080; }
-
-/* line 184, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+/* line 183, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
 .highlight .vc {
-  color: #008080; }
+  color: #f8f8f2; }
 
-/* line 187, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+/* line 186, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
 .highlight .vg {
-  color: #008080; }
+  color: #f8f8f2; }
 
-/* line 190, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+/* line 189, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
 .highlight .vi {
-  color: #008080; }
+  color: #f8f8f2; }
 
-/* line 193, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+/* line 192, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
 .highlight .nv {
-  color: #008080; }
+  color: #f8f8f2; }
 
-/* line 196, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .ow {
-  color: #000000;
-  font-weight: bold; }
-
-/* line 200, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
-.highlight .o {
-  color: #000000;
-  font-weight: bold; }
-
-/* line 204, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+/* line 195, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
 .highlight .w {
-  color: #bbbbbb; }
+  color: #f8f8f2; }
 
-/* line 207, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+/* line 198, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .nl {
+  color: #f8f8f2;
+  font-weight: bold; }
+
+/* line 202, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
+.highlight .nt {
+  color: #f92672; }
+
+/* line 205, /Users/taka/middleman/blog3/source/stylesheets/_syntax.css.erb */
 .highlight {
-  background-color: #f8f8f8; }
+  color: #f8f8f2;
+  background-color: #49483e; }
 
 /* line 5, /Users/taka/middleman/blog3/source/stylesheets/application.css.scss */
 pre {
   background: transparent;
-  border-style: none;
-  padding: initial; }
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px; }
+
+/* line 14, /Users/taka/middleman/blog3/source/stylesheets/application.css.scss */
+body {
+  font-family: MuseoSans, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", sans-serif;
+  font-size: 18px; }
+
+/* line 19, /Users/taka/middleman/blog3/source/stylesheets/application.css.scss */
+.site-head {
+  position: relative;
+  display: table;
+  width: 100%;
+  height: 30%;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #fff;
+  background: #303538 no-repeat center center;
+  background-size: cover; }

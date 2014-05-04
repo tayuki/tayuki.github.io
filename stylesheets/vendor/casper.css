@@ -73,7 +73,7 @@ fieldset {
 }
 legend { border: 0; padding: 0; }
 button, input, select,
-textarea { font-family: inherit; font-size: 100%; margin: 0; }
+textarea { font-family: inherit; font-size: 90%; margin: 0; }
 button, input { line-height: normal; }
 button, select { text-transform: none; }
 button, html input[type="button"],
@@ -192,33 +192,33 @@ h4, h5, h6 {
 }
 
 h1 {
-    font-size: 5rem;
+    font-size: 4rem;
     line-height: 1.2em;
     letter-spacing: -2px;
     text-indent: -3px;
 }
 
 h2 {
-    font-size: 4rem;
+    font-size: 1.5em;
     line-height: 1.2em;
     letter-spacing: -1px;
     text-indent: -2px;
 }
 
 h3 {
-    font-size: 3.5rem;
+    font-size: 2rem;
 }
 
 h4 {
-    font-size: 3rem;
+    font-size: 1.5rem;
 }
 
 h5 {
-    font-size: 2.5rem;
+    font-size: 1rem;
 }
 
 h6 {
-    font-size: 2rem;
+    font-size: 1rem;
 }
 
 a {
