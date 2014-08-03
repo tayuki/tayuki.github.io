@@ -1,0 +1,2 @@
+SKnodeは描写できないは描写できないため。
+SKspriteNode

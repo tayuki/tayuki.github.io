@@ -5,22 +5,10 @@
   <id>http://www.example.com</id>
   <link href="http://www.example.com"/>
   <link href="http://www.example.com/feed.xml" rel="self"/>
-  <updated>2014-07-06T10:56:00+09:00</updated>
+  <updated>2014-06-22T16:00:00+09:00</updated>
   <author>
     <name>tayuki</name>
   </author>
-  <entry>
-    <title>swift-spritekit</title>
-    <link rel="alternate" href="http://www.example.com/2014/07/06/swift-spritekit/"/>
-    <id>http://www.example.com/2014/07/06/swift-spritekit/</id>
-    <published>2014-07-06T10:56:00+09:00</published>
-    <updated>2014-07-06T21:29:14+09:00</updated>
-    <author>
-      <name>tayuki</name>
-    </author>
-    <summary type="html">SKnodeは描写できないは描写できないため。
-SKspriteNode</summary>
-  </entry>
   <entry>
     <title>OSXからwindows7へスマートカードを利用したリモートデスクトップ接続</title>
     <link rel="alternate" href="http://www.example.com/2014/06/22/msremote-desktop-access-from-osx/"/>
