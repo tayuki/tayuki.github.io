@@ -5,16 +5,90 @@
   <id>http://www.example.com</id>
   <link href="http://www.example.com"/>
   <link href="http://www.example.com/feed.xml" rel="self"/>
-  <updated>2014-05-11T20:17:00+09:00</updated>
+  <updated>2014-07-06T10:56:00+09:00</updated>
   <author>
     <name>tayuki</name>
   </author>
+  <entry>
+    <title>swift-spritekit</title>
+    <link rel="alternate" href="http://www.example.com/2014/07/06/swift-spritekit/"/>
+    <id>http://www.example.com/2014/07/06/swift-spritekit/</id>
+    <published>2014-07-06T10:56:00+09:00</published>
+    <updated>2014-07-06T21:29:14+09:00</updated>
+    <author>
+      <name>tayuki</name>
+    </author>
+    <summary type="html">SKnodeは描写できないは描写できないため。
+SKspriteNode</summary>
+  </entry>
+  <entry>
+    <title>OSXからwindows7へスマートカードを利用したリモートデスクトップ接続</title>
+    <link rel="alternate" href="http://www.example.com/2014/06/22/msremote-desktop-access-from-osx/"/>
+    <id>http://www.example.com/2014/06/22/msremote-desktop-access-from-osx/</id>
+    <published>2014-06-22T16:00:00+09:00</published>
+    <updated>2014-07-06T23:26:30+09:00</updated>
+    <author>
+      <name>tayuki</name>
+    </author>
+    <summary type="html">Macからスマートカード認証がかかったWindows端末へリモートデスクトップを行おうとしたが、MS公式のMac版のRemoteDesktopでは、スマートカードをサポートしていなかった。
+
+いくつかリモートデスクトップクライアントソフトを調べたところ、rDesktopがスマートカードに対応しているようなので、導入してみた。
+
+まずはHomeBrewのアップデートを行う。
+brew update
+
+
+デフォルトでスマートカード対応がdisableになっているので、./configureのオ...</summary>
+  </entry>
+  <entry>
+    <title>ヘッドレスなFreeBSD上にvirtualboxでWindows8.1環境を構築</title>
+    <link rel="alternate" href="http://www.example.com/2014/06/01/setting_virtualbox_onfreebsd/"/>
+    <id>http://www.example.com/2014/06/01/setting_virtualbox_onfreebsd/</id>
+    <published>2014-06-01T21:48:00+09:00</published>
+    <updated>2014-06-01T21:55:44+09:00</updated>
+    <author>
+      <name>tayuki</name>
+    </author>
+    <summary type="html">portsnap fetch
+portsnap update
+
+
+した後に、
+cd /usr/ports/emulators/virtualbox-ose
+make BATCH=yes install clean
+
+
+でインストール
+
+現在でバージョンは以下のとおり。
+% VBoxManage -v
+4.3.12_OSEr93733
+
+
+※4.3でないとWindows8.1の64bit版がインストールできないらしい…。</summary>
+  </entry>
+  <entry>
+    <title>MacBookAir(Late2009)のデータサルベージ</title>
+    <link rel="alternate" href="http://www.example.com/2014/05/11/salvage-old-macbookair-data/"/>
+    <id>http://www.example.com/2014/05/11/salvage-old-macbookair-data/</id>
+    <published>2014-05-11T23:13:00+09:00</published>
+    <updated>2014-08-03T12:17:50+09:00</updated>
+    <author>
+      <name>tayuki</name>
+    </author>
+    <summary type="html">妻のMacBookAir（Late2009）が起動しなくなったので、データだけでも復旧するため、データのサルベージを行った。このストレージのインターフェイスがくせ者で苦労したので、メモ。
+
+アダプタが国内ではうってない…
+
+通常なら、HDDをUSB接続して新しいMacへ復元してやれば一発だが、このMacBookAirに搭載させているストレージは1.8インチのSSDで、かつインフターフェイスがLIF SATA 24pinというもの。
+当時は代理店などで販売していたようだが、今はすでに国内で売...</summary>
+  </entry>
   <entry>
     <title>middlemanでブログはじめました。</title>
     <link rel="alternate" href="http://www.example.com/2014/05/11/start-middleman-blog/"/>
     <id>http://www.example.com/2014/05/11/start-middleman-blog/</id>
     <published>2014-05-11T20:17:00+09:00</published>
-    <updated>2014-05-12T23:01:20+09:00</updated>
+    <updated>2014-05-12T23:48:58+09:00</updated>
     <author>
       <name>tayuki</name>
     </author>
