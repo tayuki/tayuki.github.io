@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Graffiti: lac-lns-configuration</title>
+<meta content='vpdn周りのテストをしたくて、LAC-LNS環境を構築したので、構築メモ。 構成 Client hostname clinent interface FastEthernet0/0 no ip address duplex auto speed auto pppoe enable' name='description'>
+<meta charset='utf-8'>
+<meta content='width=device-width, initial-scale=1.0' name='viewport'>
+<meta content='IE=edge' http-equiv='X-UA-Compatible'>
+<meta content='True' name='HandheldFriendly'>
+<meta content='320' name='MobileOptimized'>
+<link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+<link href="/images/favicon.ico" rel="icon" type="image/ico" />
+<link href="/stylesheets/application.css" rel="stylesheet" type="text/css" />
+<link href='//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400' rel='stylesheet' type='text/css'>
+</head>
+<body class='post-template tag-getting-started'>
+<main class='content' role='main'>
+<article class='post tag-getting-started'>
+<header class='post-header'>
+<a class='blog-logo' href='/'>
+<span class='blog-title'>Graffiti</span>
+</a>
+</header>
+<span class='post-meta'>
+<time datetime='2014-08-31'>
+31 Aug 2014
+</time>
+</span>
+<h1 class='post-title'>lac-lns-configuration</h1>
+<section class='post-content'><p>vpdn周りのテストをしたくて、LAC-LNS環境を構築したので、構築メモ。</p>
+
+<h2>構成</h2>
+
+<p><img src="/images/LAC-LNS_network.png" /></p>
+
+<h2>Client</h2>
+<pre class="highlight plaintext">hostname clinent
+
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+ pppoe enable group global
+ pppoe-client dial-pool-number 1
+
+interface Dialer0
+ ip address negotiated
+ ip mtu 1452
+ encapsulation ppp
+ dialer pool 1
+ ppp authentication chap callin
+ ppp chap hostname router1@cisco.com
+ ppp chap password 0 cisco
+
+
+</pre>
+<pre class="highlight plaintext">client#sh ip int b
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            unassigned      YES NVRAM  up                    up      
+FastEthernet0/1            unassigned      YES NVRAM  administratively down down    
+Virtual-Access1            unassigned      YES unset  up                    up      
+Virtual-Access2            unassigned      YES unset  up                    up      
+Dialer0                    192.168.1.1     YES IPCP   up                    up    
+</pre>
+<pre class="highlight plaintext">client#sh ip route 
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is 0.0.0.0 to network 0.0.0.0
+
+     10.0.0.0/32 is subnetted, 1 subnets
+C       10.10.10.10 is directly connected, Dialer0
+     192.168.1.0/32 is subnetted, 1 subnets
+C       192.168.1.1 is directly connected, Dialer0
+S*   0.0.0.0/0 is directly connected, Dialer0
+</pre>
+
+<h2>LAC</h2>
+<pre class="highlight plaintext">hostname LAC
+
+aaa new-model
+
+vpdn enable
+vpdn search-order domain  
+
+vpdn-group TESTNETWORK
+ request-dialin
+  protocol l2tp
+  domain cisco.com
+ initiate-to ip 10.0.0.10
+ local name LAC
+ l2tp tunnel password 0 password
+
+bba-group pppoe steve
+ virtual-template 1
+!
+
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+ pppoe enable group steve
+!
+interface FastEthernet0/1
+ ip address 10.0.0.5 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface Virtual-Template1
+ no ip address
+ ppp authentication chap
+!
+</pre>
+
+<h2>LNS</h2>
+<pre class="highlight plaintext">hostname LNS
+
+aaa new-model
+
+aaa group server radius RADIUS_SERVER
+ server 10.1.0.1 auth-port 1812 acct-port 1813
+!
+aaa authentication ppp default group RADIUS_SERVER
+aaa accounting network default start-stop group RADIUS_SERVER
+aaa accounting connection default start-stop group RADIUS_SERVER
+aaa accounting system default start-stop group RADIUS_SERVER
+!
+
+vpdn enable
+!
+vpdn-group 21CN
+! Default L2TP VPDN group
+ accept-dialin
+  protocol l2tp
+  virtual-template 1
+ l2tp tunnel password 0 password
+
+interface Loopback0
+ ip address 10.10.10.10 255.255.255.255
+!
+interface FastEthernet0/0
+ ip address 10.0.0.10 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface FastEthernet0/1
+ ip address 10.1.0.2 255.255.255.0
+ duplex auto
+ speed auto
+!
+interface Virtual-Template1
+ ip unnumbered Loopback0
+ peer default ip address pool POOL
+ ppp authentication chap callin
+!
+ip local pool POOL 192.168.1.1 192.168.2.254
+no ip http server
+no ip http secure-server
+
+radius-server host 10.1.0.1 auth-port 1812 acct-port 1813 key radiuspassword
+
+</pre>
+
+<h2>Radius</h2>
+
+<p>FreeRadiusを使用した。
+以下config</p>
+
+<h3>/etc/raddb/clients.conf</h3>
+<pre class="highlight plaintext">client 10.1.0.2 {
+    secret     = radiuspassword
+    shortname  = 10.1.0.2
+    nastype    = cisco
+}
+</pre>
+
+<h3>/etc/raddb/users</h3>
+<pre class="highlight plaintext">router1@cisco.com Cleartext-Password := "cisco"
+</pre>
+
+<h2>参考</h2>
+
+<ul>
+<li><a href="http://ccieblog.co.uk/dsl/configuring-dsl">Configuring DSL (ISP &amp; Customer Side)</a></li>
+<li><a href="http://mellowd.co.uk/ccie/?p=4819">CISCO LNS-LAC BASIC CONFIGURATION</a></li>
+<li><a href="http://www.cisco.com/cisco/web/support/JP/docs/RT/ServProviderEdgeRT/10000RT/CG/003/2226_20_5.html?bid=0900e4b1825ae786">LAC および LNS の設定</a></li>
+</ul>
+</section>
+<footer class='post-footer'>
+<section class='share'>
+<h4>Share this post</h4>
+<a class='icon-twitter' href='https://twitter.com/share?text=lac-lns-configuration&amp;amp;url=http://www.example.com/2014/08/31/lac-lns-configuration/' onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+<span class='hidden'>Twitter</span>
+</a>
+<a class='icon-facebook' href='https://www.facebook.com/sharer/sharer.php?u=http://www.example.com/2014/08/31/lac-lns-configuration/' onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+<span class='hidden'>Facebook</span>
+</a>
+<a class='icon-google-plus' href='https://plus.google.com/share?url=http://www.example.com/2014/08/31/lac-lns-configuration/' onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+<span class='hidden'>Google+</span>
+</a>
+</section>
+<script type="text/javascript">
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-53474529-1', 'auto');
+  ga('send', 'pageview');
+</script>
+</footer>
+</article>
+</main>
+
+<footer class='site-footer'>
+<a class='subscribe icon-feed' href='/feed.xml'>
+<span class='tooltip'>Subscribe!</span>
+</a>
+<div class='inner'>
+<section class='copyright'>
+All content copyright
+<a href="/">Graffiti</a>
+&copy;
+2014
+&bull; All rights reserved.
+</section>
+<section class='poweredby'>
+Proudly published with
+<a href='http://middlemanapp.com'>Middleman</a>
+</section>
+<section class='poweredby'>
+Casper theme powered by
+<a class='icon-ghost' href='https://ghost.org'>Ghost</a>
+</section>
+</div>
+</footer>
+<script src="/javascripts/application.js" type="text/javascript"></script>
+</body>
+</html>

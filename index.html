@@ -26,6 +26,39 @@
 <article class='post tag-getting-started'>
 <header class='post-header'>
 <span class='post-meta'>
+<time datetime='2014-08-31'>
+31 Aug 2014
+</time>
+</span>
+<h1 class='post-title'><a href="/2014/08/31/lac-lns-configuration/">lac-lns-configuration</a></h1>
+</header>
+<section class='post-excerpt'>
+<p>
+vpdn周りのテストをしたくて、LAC-LNS環境を構築したので、構築メモ。
+
+構成
+
+
+
+Client
+hostname clinent
+
+interface FastEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+ pppoe enable group global
+ pppoe-client dial-pool-number 1
+
+interface Dialer0
+ ip address negotiated
+ ip mtu 1452...
+</p>
+</section>
+</article>
+<article class='post tag-getting-started'>
+<header class='post-header'>
+<span class='post-meta'>
 <time datetime='2014-06-22'>
 22 Jun 2014
 </time>
