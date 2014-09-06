@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Graffiti: lac-lns-configuration</title>
-<meta content='vpdn周りのテストをしたくて、LAC-LNS環境を構築したので、構築メモ。 構成 Client hostname clinent interface FastEthernet0/0 no ip address duplex auto speed auto pppoe enable' name='description'>
+<title>Graffiti: LAC-LNSデモ環境作ってみた</title>
+<meta content='PPPoEとかvpdn周りのテストをしたくて、LAC-LNS環境を構築したので、構築メモ。 構成 Clientのconfig hostname clinent interface FastEthernet0/0 no ip address duplex auto speed auto' name='description'>
 <meta charset='utf-8'>
 <meta content='width=device-width, initial-scale=1.0' name='viewport'>
 <meta content='IE=edge' http-equiv='X-UA-Compatible'>
@@ -26,14 +26,14 @@
 31 Aug 2014
 </time>
 </span>
-<h1 class='post-title'>lac-lns-configuration</h1>
-<section class='post-content'><p>vpdn周りのテストをしたくて、LAC-LNS環境を構築したので、構築メモ。</p>
+<h1 class='post-title'>LAC-LNSデモ環境作ってみた</h1>
+<section class='post-content'><p>PPPoEとかvpdn周りのテストをしたくて、LAC-LNS環境を構築したので、構築メモ。</p>
 
 <h2>構成</h2>
 
 <p><img src="/images/LAC-LNS_network.png" /></p>
 
-<h2>Client</h2>
+<h2>Clientのconfig</h2>
 <pre class="highlight plaintext">hostname clinent
 
 interface FastEthernet0/0
@@ -54,33 +54,8 @@ interface Dialer0
 
 
 </pre>
-<pre class="highlight plaintext">client#sh ip int b
-Interface                  IP-Address      OK? Method Status                Protocol
-FastEthernet0/0            unassigned      YES NVRAM  up                    up      
-FastEthernet0/1            unassigned      YES NVRAM  administratively down down    
-Virtual-Access1            unassigned      YES unset  up                    up      
-Virtual-Access2            unassigned      YES unset  up                    up      
-Dialer0                    192.168.1.1     YES IPCP   up                    up    
-</pre>
-<pre class="highlight plaintext">client#sh ip route 
-Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
-       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
-       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
-       E1 - OSPF external type 1, E2 - OSPF external type 2
-       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
-       ia - IS-IS inter area, * - candidate default, U - per-user static route
-       o - ODR, P - periodic downloaded static route
 
-Gateway of last resort is 0.0.0.0 to network 0.0.0.0
-
-     10.0.0.0/32 is subnetted, 1 subnets
-C       10.10.10.10 is directly connected, Dialer0
-     192.168.1.0/32 is subnetted, 1 subnets
-C       192.168.1.1 is directly connected, Dialer0
-S*   0.0.0.0/0 is directly connected, Dialer0
-</pre>
-
-<h2>LAC</h2>
+<h2>LACのconfig</h2>
 <pre class="highlight plaintext">hostname LAC
 
 aaa new-model
@@ -117,7 +92,7 @@ interface Virtual-Template1
 !
 </pre>
 
-<h2>LNS</h2>
+<h2>LNSのconfig</h2>
 <pre class="highlight plaintext">hostname LNS
 
 aaa new-model
@@ -166,9 +141,9 @@ radius-server host 10.1.0.1 auth-port 1812 acct-port 1813 key radiuspassword
 
 </pre>
 
-<h2>Radius</h2>
+<h2>Radiusのconfig</h2>
 
-<p>FreeRadiusを使用した。
+<p>FreeRadiusを使用した。usersの記載方法がversionによって違うようで苦労した。
 以下config</p>
 
 <h3>/etc/raddb/clients.conf</h3>
@@ -183,18 +158,44 @@ radius-server host 10.1.0.1 auth-port 1812 acct-port 1813 key radiuspassword
 <pre class="highlight plaintext">router1@cisco.com Cleartext-Password := "cisco"
 </pre>
 
+<h2>接続した状態@Client</h2>
+<pre class="highlight plaintext">client#sh ip int b
+Interface                  IP-Address      OK? Method Status                Protocol
+FastEthernet0/0            unassigned      YES NVRAM  up                    up      
+FastEthernet0/1            unassigned      YES NVRAM  administratively down down    
+Virtual-Access1            unassigned      YES unset  up                    up      
+Virtual-Access2            unassigned      YES unset  up                    up      
+Dialer0                    192.168.1.1     YES IPCP   up                    up    
+</pre>
+<pre class="highlight plaintext">client#sh ip route 
+Codes: C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route
+
+Gateway of last resort is 0.0.0.0 to network 0.0.0.0
+
+     10.0.0.0/32 is subnetted, 1 subnets
+C       10.10.10.10 is directly connected, Dialer0
+     192.168.1.0/32 is subnetted, 1 subnets
+C       192.168.1.1 is directly connected, Dialer0
+S*   0.0.0.0/0 is directly connected, Dialer0
+</pre>
+
 <h2>参考</h2>
 
-<ul>
-<li><a href="http://ccieblog.co.uk/dsl/configuring-dsl">Configuring DSL (ISP &amp; Customer Side)</a></li>
-<li><a href="http://mellowd.co.uk/ccie/?p=4819">CISCO LNS-LAC BASIC CONFIGURATION</a></li>
-<li><a href="http://www.cisco.com/cisco/web/support/JP/docs/RT/ServProviderEdgeRT/10000RT/CG/003/2226_20_5.html?bid=0900e4b1825ae786">LAC および LNS の設定</a></li>
-</ul>
+<p>下記のURLを参考にしました。
+* <a href="http://ccieblog.co.uk/dsl/configuring-dsl">Configuring DSL (ISP &amp; Customer Side)</a>
+* <a href="http://mellowd.co.uk/ccie/?p=4819">CISCO LNS-LAC BASIC CONFIGURATION</a>
+* <a href="http://www.cisco.com/cisco/web/support/JP/docs/RT/ServProviderEdgeRT/10000RT/CG/003/2226_20_5.html?bid=0900e4b1825ae786">LAC および LNS の設定</a></p>
 </section>
 <footer class='post-footer'>
 <section class='share'>
 <h4>Share this post</h4>
-<a class='icon-twitter' href='https://twitter.com/share?text=lac-lns-configuration&amp;amp;url=http://www.example.com/2014/08/31/lac-lns-configuration/' onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+<a class='icon-twitter' href='https://twitter.com/share?text=LAC-LNSデモ環境作ってみた&amp;amp;url=http://www.example.com/2014/08/31/lac-lns-configuration/' onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
 <span class='hidden'>Twitter</span>
 </a>
 <a class='icon-facebook' href='https://www.facebook.com/sharer/sharer.php?u=http://www.example.com/2014/08/31/lac-lns-configuration/' onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">

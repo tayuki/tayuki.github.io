@@ -30,17 +30,17 @@
 31 Aug 2014
 </time>
 </span>
-<h1 class='post-title'><a href="/2014/08/31/lac-lns-configuration/">lac-lns-configuration</a></h1>
+<h1 class='post-title'><a href="/2014/08/31/lac-lns-configuration/">LAC-LNSデモ環境作ってみた</a></h1>
 </header>
 <section class='post-excerpt'>
 <p>
-vpdn周りのテストをしたくて、LAC-LNS環境を構築したので、構築メモ。
+PPPoEとかvpdn周りのテストをしたくて、LAC-LNS環境を構築したので、構築メモ。
 
 構成
 
 
 
-Client
+Clientのconfig
 hostname clinent
 
 interface FastEthernet0/0
@@ -51,8 +51,7 @@ interface FastEthernet0/0
  pppoe-client dial-pool-number 1
 
 interface Dialer0
- ip address negotiated
- ip mtu 1452...
+ ip address negotiated...
 </p>
 </section>
 </article>

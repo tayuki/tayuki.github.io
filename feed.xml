@@ -10,21 +10,21 @@
     <name>tayuki</name>
   </author>
   <entry>
-    <title>lac-lns-configuration</title>
+    <title>LAC-LNSデモ環境作ってみた</title>
     <link rel="alternate" href="http://www.example.com/2014/08/31/lac-lns-configuration/"/>
     <id>http://www.example.com/2014/08/31/lac-lns-configuration/</id>
     <published>2014-08-31T11:09:00+09:00</published>
-    <updated>2014-09-06T17:10:08+09:00</updated>
+    <updated>2014-09-06T22:44:06+09:00</updated>
     <author>
       <name>tayuki</name>
     </author>
-    <summary type="html">vpdn周りのテストをしたくて、LAC-LNS環境を構築したので、構築メモ。
+    <summary type="html">PPPoEとかvpdn周りのテストをしたくて、LAC-LNS環境を構築したので、構築メモ。
 
 構成
 
 
 
-Client
+Clientのconfig
 hostname clinent
 
 interface FastEthernet0/0
@@ -35,8 +35,7 @@ interface FastEthernet0/0
  pppoe-client dial-pool-number 1
 
 interface Dialer0
- ip address negotiated
- ip mtu 1452...</summary>
+ ip address negotiated...</summary>
   </entry>
   <entry>
     <title>OSXからwindows7へスマートカードを利用したリモートデスクトップ接続</title>
