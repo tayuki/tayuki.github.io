@@ -25,17 +25,6 @@ iPad mini3という選択肢もあったけど、スペックが全く変わっ�
 初代iPad miniはスペックが出た当初から一世代前ということで、バージョンが上がるたびに、PDFの閲覧...</summary>
   </entry>
   <entry>
-    <title/>
-    <link rel="alternate" href="http://www.example.com/2014/09/06/test2/"/>
-    <id>http://www.example.com/2014/09/06/test2/</id>
-    <published>2014-09-06T00:00:00+09:00</published>
-    <updated>2014-09-06T22:55:11+09:00</updated>
-    <author>
-      <name>tayuki</name>
-    </author>
-    <summary type="html"></summary>
-  </entry>
-  <entry>
     <title>LAC-LNSデモ環境作ってみた</title>
     <link rel="alternate" href="http://www.example.com/2014/08/31/lac-lns-configuration/"/>
     <id>http://www.example.com/2014/08/31/lac-lns-configuration/</id>
@@ -124,5 +113,26 @@ $ make BATCH=yes install clean
 
 通常なら、HDDをUSB接続して新しいMacへ復元してやれば一発だが、このMacBookAirに搭載させているストレージは1.8インチのSSDで、かつインフターフェイスがLIF SATA 24pinというもの。
 当時は代理店などで販売していたようだが、今はすでに国内で売...</summary>
+  </entry>
+  <entry>
+    <title>middlemanでブログはじめました。</title>
+    <link rel="alternate" href="http://www.example.com/2014/05/11/start-middleman-blog/"/>
+    <id>http://www.example.com/2014/05/11/start-middleman-blog/</id>
+    <published>2014-05-11T20:17:00+09:00</published>
+    <updated>2014-05-12T23:48:58+09:00</updated>
+    <author>
+      <name>tayuki</name>
+    </author>
+    <summary type="html">
+
+wordpressのセキュリティ意識するのが面倒なので、移行先ブログエンジンをさがしていました。途中octopressで構築していたけど、カスタマイズが思うようにいかないし、使っててしっくりこない..。
+結局middlemanでblogを再構築することにしました。
+
+rbenvはすでに導入ずみなので、$ gem install middleman
+ですぐ使える状態に。
+
+追加したgemは以下のとおり。
+gem 'middleman-deploy'
+gem "middleman-google...</summary>
   </entry>
 </feed>
