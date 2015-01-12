@@ -1,3 +1,0 @@
-* <code>crtl+shift</code>を押しながら<code>↓</code>で値の入ったセル（行もしくは列）を全選択
-* test
-
