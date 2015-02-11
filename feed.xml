@@ -2,17 +2,17 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>Graffiti</title>
   <subtitle/>
-  <id>http://www.example.com</id>
-  <link href="http://www.example.com"/>
-  <link href="http://www.example.com/feed.xml" rel="self"/>
+  <id>http://tech.graffiti-life.com</id>
+  <link href="http://tech.graffiti-life.com"/>
+  <link href="http://tech.graffiti-life.com/feed.xml" rel="self"/>
   <updated>2015-01-12T14:44:34+09:00</updated>
   <author>
     <name>tayuki</name>
   </author>
   <entry>
     <title>時間が加速していく</title>
-    <link rel="alternate" href="http://www.example.com/2015/01/12/time-is-accelerated/"/>
-    <id>http://www.example.com/2015/01/12/time-is-accelerated/</id>
+    <link rel="alternate" href="http://tech.graffiti-life.com/2015/01/12/time-is-accelerated/"/>
+    <id>http://tech.graffiti-life.com/2015/01/12/time-is-accelerated/</id>
     <published>2015-01-12T14:44:34+09:00</published>
     <updated>2015-01-12T21:17:25+09:00</updated>
     <author>
@@ -32,8 +32,8 @@
   </entry>
   <entry>
     <title>初代iPad miniからiPad mini2に買い替えた。</title>
-    <link rel="alternate" href="http://www.example.com/2014/11/10/replace-ipad-mini/"/>
-    <id>http://www.example.com/2014/11/10/replace-ipad-mini/</id>
+    <link rel="alternate" href="http://tech.graffiti-life.com/2014/11/10/replace-ipad-mini/"/>
+    <id>http://tech.graffiti-life.com/2014/11/10/replace-ipad-mini/</id>
     <published>2014-11-10T20:26:48+09:00</published>
     <updated>2014-11-18T23:25:55+09:00</updated>
     <author>
@@ -47,8 +47,8 @@ iPad mini3という選択肢もあったけど、スペックが全く変わっ�
   </entry>
   <entry>
     <title>LAC-LNSデモ環境作ってみた</title>
-    <link rel="alternate" href="http://www.example.com/2014/08/31/lac-lns-configuration/"/>
-    <id>http://www.example.com/2014/08/31/lac-lns-configuration/</id>
+    <link rel="alternate" href="http://tech.graffiti-life.com/2014/08/31/lac-lns-configuration/"/>
+    <id>http://tech.graffiti-life.com/2014/08/31/lac-lns-configuration/</id>
     <published>2014-08-31T11:09:00+09:00</published>
     <updated>2014-09-06T22:44:06+09:00</updated>
     <author>
@@ -75,8 +75,8 @@ interface Dialer0
   </entry>
   <entry>
     <title>OSXからwindows7へスマートカードを利用したリモートデスクトップ接続</title>
-    <link rel="alternate" href="http://www.example.com/2014/06/22/msremote-desktop-access-from-osx/"/>
-    <id>http://www.example.com/2014/06/22/msremote-desktop-access-from-osx/</id>
+    <link rel="alternate" href="http://tech.graffiti-life.com/2014/06/22/msremote-desktop-access-from-osx/"/>
+    <id>http://tech.graffiti-life.com/2014/06/22/msremote-desktop-access-from-osx/</id>
     <published>2014-06-22T16:00:00+09:00</published>
     <updated>2014-08-03T20:59:07+09:00</updated>
     <author>
@@ -94,8 +94,8 @@ brew update
   </entry>
   <entry>
     <title>ヘッドレスなFreeBSD上にvirtualboxでWindows8.1環境を構築</title>
-    <link rel="alternate" href="http://www.example.com/2014/06/01/setting_virtualbox_onfreebsd/"/>
-    <id>http://www.example.com/2014/06/01/setting_virtualbox_onfreebsd/</id>
+    <link rel="alternate" href="http://tech.graffiti-life.com/2014/06/01/setting_virtualbox_onfreebsd/"/>
+    <id>http://tech.graffiti-life.com/2014/06/01/setting_virtualbox_onfreebsd/</id>
     <published>2014-06-01T21:48:00+09:00</published>
     <updated>2014-08-03T20:56:00+09:00</updated>
     <author>
@@ -121,8 +121,8 @@ $ make BATCH=yes install clean
   </entry>
   <entry>
     <title>MacBookAir(Late2009)のデータサルベージ</title>
-    <link rel="alternate" href="http://www.example.com/2014/05/11/salvage-old-macbookair-data/"/>
-    <id>http://www.example.com/2014/05/11/salvage-old-macbookair-data/</id>
+    <link rel="alternate" href="http://tech.graffiti-life.com/2014/05/11/salvage-old-macbookair-data/"/>
+    <id>http://tech.graffiti-life.com/2014/05/11/salvage-old-macbookair-data/</id>
     <published>2014-05-11T23:13:00+09:00</published>
     <updated>2014-08-03T12:17:50+09:00</updated>
     <author>
