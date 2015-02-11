@@ -1071,36 +1071,37 @@ margin on the iframe, cause it breaks stuff. */
 
   /* line 961, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   h1 {
-    font-size: 4.8rem;
+    font-size: 4.0rem;
+    /* font-size: 4.5rem; */
     text-indent: -2px; }
 
-  /* line 966, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 967, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   h2 {
     font-size: 3.8rem; }
 
-  /* line 970, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 971, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   h3 {
     font-size: 3.3rem; }
 
-  /* line 974, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 975, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   h4 {
     font-size: 2.8rem; } }
 /* ==========================================================================
    10. Media Queries - Smaller than 500px
    ========================================================================== */
 @media only screen and (max-width: 500px) {
-  /* line 987, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 988, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   .blog-logo img {
     max-height: 80px; }
 
-  /* line 992, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 993, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   .inner,
   .pagination {
     width: auto;
     margin-left: 16px;
     margin-right: 16px; }
 
-  /* line 998, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 999, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   .post {
     width: auto;
     margin-left: 16px;
@@ -1108,45 +1109,47 @@ margin on the iframe, cause it breaks stuff. */
     font-size: 0.8em;
     line-height: 1.6em; }
 
-  /* line 1006, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 1007, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   .site-head {
     padding: 10% 0; }
 
-  /* line 1010, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 1011, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   .blog-title {
     font-size: 3rem; }
 
-  /* line 1014, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 1015, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   .blog-description {
     font-size: 1.5rem; }
 
-  /* line 1019, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 1020, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   h1, h2 {
-    font-size: 3rem;
+    /* font-size: 3rem; */
+    font-size: 2rem;
     line-height: 1.1em;
     letter-spacing: -1px; }
 
-  /* line 1025, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 1027, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   h3 {
-    font-size: 2.8rem; }
+    /* font-size: 2.8rem; */
+    font-size: 1.8rem; }
 
-  /* line 1029, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 1032, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   h4 {
     font-size: 2.3rem; }
 
-  /* line 1033, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 1036, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   .post-template .post {
     padding-bottom: 0; }
 
-  /* line 1037, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 1040, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   .post-template .post-header {
     padding: 30px 0; }
 
-  /* line 1041, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 1044, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   .post-content img {
     padding: 0; }
 
-  /* line 1045, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 1048, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   .post-content .full-img {
     width: auto;
     width: calc(100% + 32px);
@@ -1157,41 +1160,41 @@ margin on the iframe, cause it breaks stuff. */
     max-width: 112%;
     /* fallback when calc doesn't work */ }
 
-  /* line 1053, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 1056, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   .post-meta {
     font-size: 1.3rem; }
 
-  /* line 1057, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 1060, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   .post-footer {
     padding: 4rem 0;
     text-align: center; }
 
-  /* line 1062, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 1065, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   .post-footer .author {
     margin: 0 0 2rem 0;
     padding: 0 0 1.6rem 0;
     border-bottom: #EBF2F6 1px dashed; }
 
-  /* line 1068, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 1071, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   .post-footer .share {
     position: static;
     width: auto; }
 
-  /* line 1073, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 1076, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   .post-footer .share a {
     margin: 1.4rem 0.8rem 0 0.8rem; }
 
-  /* line 1078, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 1081, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   .older-posts,
   .newer-posts {
     position: static;
     margin: 10px 0; }
 
-  /* line 1083, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 1086, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   .page-number {
     display: block; }
 
-  /* line 1087, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
+  /* line 1090, /Users/taka/middleman/blog3/source/stylesheets/vendor/casper.css */
   .site-footer {
     margin-top: 6rem;
     font-size: 1.1rem; } }

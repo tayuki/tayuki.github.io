@@ -51,6 +51,26 @@
 <p>altキーがきかなかったので以下を参照して対処。</p>
 
 <p><a href="http://outofhanwell.wordpress.com/2006/07/27/rdesktop-on-the-mac/">Rdesktop On The Mac</a></p>
+
+<h3>追記</h3>
+
+<p>一度<code>brew edit</code>してしまうと、<code>brew update</code>したときに下記のように怒られてしま</p>
+<pre class="highlight plaintext">error: Your local changes to the following files would be overwritten by merge:
+Library/Formula/rdesktop.rb
+Please, commit your changes or stash them before you can merge.
+Aborting
+Error: Failure while executing: git pull -q origin refs/heads/master:refs/remotes/origin/master
+</pre>
+
+<p>ファイルの変更をなかったことにして
+<code>
+cd /usr/local
+git add .
+git stash
+git reset --hard
+</code></p>
+
+<p>再度、<code>brew update</code>でOK.</p>
 </section>
 <footer class='post-footer'>
 <section class='share'>
