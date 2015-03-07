@@ -46,6 +46,22 @@ iPad mini3という選択肢もあったけど、スペックが全く変わっ�
 初代iPad miniはスペックが出た当初から一世代前ということで、バージョンが上がるたびに、PDFの閲覧...</summary>
   </entry>
   <entry>
+    <title>アカマイ　知られざるインターネットの巨人を読んだ。</title>
+    <link rel="alternate" href="http://tech.graffiti-life.com/2014/10/21/read-akamai-book/"/>
+    <id>http://tech.graffiti-life.com/2014/10/21/read-akamai-book/</id>
+    <published>2014-10-21T21:58:53+09:00</published>
+    <updated>2015-03-07T14:51:13+09:00</updated>
+    <author>
+      <name>tayuki</name>
+    </author>
+    <summary type="html">
+
+amazonの角川祭りで安くなっていたので、アカマイ　知られざるインターネットの巨人を読んだ。
+一応ネットワークエンジニアとして、今はISP関連の仕事をしているので、身近な話題でたのしく読めた。BGPやTCPなど技術的なとこも初心者にわかりやすく説明していて読みやすかったの。ネットワークの知識がない人でもこの辺に興味があればおすすめ。
+
+akamaiってWorld IPv6 Dayのときにどれだけv6のトラフィックが増えれるか確認するのにwebページ見たぐらいで実際どんなことをやってる...</summary>
+  </entry>
+  <entry>
     <title>LAC-LNSデモ環境作ってみた</title>
     <link rel="alternate" href="http://tech.graffiti-life.com/2014/08/31/lac-lns-configuration/"/>
     <id>http://tech.graffiti-life.com/2014/08/31/lac-lns-configuration/</id>
@@ -118,21 +134,5 @@ $ make BATCH=yes install clean
 
 
 ※4.3でないとWindows8.1の64bit版がインストールできないらしい…。</summary>
-  </entry>
-  <entry>
-    <title>MacBookAir(Late2009)のデータサルベージ</title>
-    <link rel="alternate" href="http://tech.graffiti-life.com/2014/05/11/salvage-old-macbookair-data/"/>
-    <id>http://tech.graffiti-life.com/2014/05/11/salvage-old-macbookair-data/</id>
-    <published>2014-05-11T23:13:00+09:00</published>
-    <updated>2014-08-03T12:17:50+09:00</updated>
-    <author>
-      <name>tayuki</name>
-    </author>
-    <summary type="html">妻のMacBookAir（Late2009）が起動しなくなったので、データだけでも復旧するため、データのサルベージを行った。このストレージのインターフェイスがくせ者で苦労したので、メモ。
-
-アダプタが国内ではうってない…
-
-通常なら、HDDをUSB接続して新しいMacへ復元してやれば一発だが、このMacBookAirに搭載させているストレージは1.8インチのSSDで、かつインフターフェイスがLIF SATA 24pinというもの。
-当時は代理店などで販売していたようだが、今はすでに国内で売...</summary>
   </entry>
 </feed>
