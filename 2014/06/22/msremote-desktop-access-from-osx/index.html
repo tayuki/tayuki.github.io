@@ -62,16 +62,30 @@ Aborting
 Error: Failure while executing: git pull -q origin refs/heads/master:refs/remotes/origin/master
 </pre>
 
-<p>ファイルの変更をなかったことにして
-<code>
-cd /usr/local
+<p>ファイルの変更をなかったことにして</p>
+<pre class="highlight plaintext">cd /usr/local
 git add .
 git stash
 git reset --hard
-</code></p>
+</pre>
 
 <p>再度、<code>brew update</code>でOK.</p>
 </section>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+//<![CDATA[
+                  var disqus_shortname = 'tayuki';
+          
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+//]]>
+</script>
+<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
 <footer class='post-footer'>
 <section class='share'>
 <h4>Share this post</h4>
