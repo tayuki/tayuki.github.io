@@ -26,6 +26,38 @@
 <article class='post tag-getting-started'>
 <header class='post-header'>
 <span class='post-meta'>
+<time datetime='2014-06-01'>
+01 Jun 2014
+</time>
+on virtualbox FreeBSD Windows
+</span>
+<h1 class='post-title'><a href="/2014/06/01/setting_virtualbox_onfreebsd/">ヘッドレスなFreeBSD上にvirtualboxでWindows8.1環境を構築</a></h1>
+</header>
+<section class='post-excerpt'>
+<p>
+$ portsnap fetch
+$ portsnap update
+
+
+した後に、
+$ cd /usr/ports/emulators/virtualbox-ose
+$ make BATCH=yes install clean
+
+
+でインストール
+
+現在でバージョンは以下のとおり。
+% VBoxManage -v
+4.3.12_OSEr93733
+
+
+※4.3でないとWindows8.1の64bit版がインストールできないらしい…。
+</p>
+</section>
+</article>
+<article class='post tag-getting-started'>
+<header class='post-header'>
+<span class='post-meta'>
 <time datetime='2014-05-11'>
 11 May 2014
 </time>

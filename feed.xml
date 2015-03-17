@@ -5,10 +5,31 @@
   <id>http://tech.graffiti-life.com</id>
   <link href="http://tech.graffiti-life.com"/>
   <link href="http://tech.graffiti-life.com/feed.xml" rel="self"/>
-  <updated>2015-01-12T14:44:34+09:00</updated>
+  <updated>2015-02-08T22:34:21+09:00</updated>
   <author>
     <name>tayuki</name>
   </author>
+  <entry>
+    <title>Raspberry piを買ってセットアップした。</title>
+    <link rel="alternate" href="http://tech.graffiti-life.com/2015/02/08/setup-raspberrypi/"/>
+    <id>http://tech.graffiti-life.com/2015/02/08/setup-raspberrypi/</id>
+    <published>2015-02-08T22:34:21+09:00</published>
+    <updated>2015-03-17T22:49:03+09:00</updated>
+    <author>
+      <name>tayuki</name>
+    </author>
+    <summary type="html">Raspberry piを買ってセットアップしたのでメモ
+
+買ったもの
+
+以下３点で動作確認済
+
+Raspberry Pi ラズベリー・パイ 超小型パソコン MODEL B (PLUS) MMP-RPI-PLUS/A
+
+BUFFALO 無線LAN子機 コンパクトモデル 11n技術・11g/b対応 WLI-UC-GNM
+
+【Amazon.co.jp限定】Transcend microSDHCカード 32GB Class10 (無期限保証) Newニンテンドー3DS 動作確認済み TS32GUSDHC10E...</summary>
+  </entry>
   <entry>
     <title>時間が加速していく</title>
     <link rel="alternate" href="http://tech.graffiti-life.com/2015/01/12/time-is-accelerated/"/>
@@ -107,32 +128,5 @@ brew update
 
 
 デフォルトでスマートカード対応がdisableになっているので、./configureのオ...</summary>
-  </entry>
-  <entry>
-    <title>ヘッドレスなFreeBSD上にvirtualboxでWindows8.1環境を構築</title>
-    <link rel="alternate" href="http://tech.graffiti-life.com/2014/06/01/setting_virtualbox_onfreebsd/"/>
-    <id>http://tech.graffiti-life.com/2014/06/01/setting_virtualbox_onfreebsd/</id>
-    <published>2014-06-01T21:48:00+09:00</published>
-    <updated>2014-08-03T20:56:00+09:00</updated>
-    <author>
-      <name>tayuki</name>
-    </author>
-    <summary type="html">$ portsnap fetch
-$ portsnap update
-
-
-した後に、
-$ cd /usr/ports/emulators/virtualbox-ose
-$ make BATCH=yes install clean
-
-
-でインストール
-
-現在でバージョンは以下のとおり。
-% VBoxManage -v
-4.3.12_OSEr93733
-
-
-※4.3でないとWindows8.1の64bit版がインストールできないらしい…。</summary>
   </entry>
 </feed>
